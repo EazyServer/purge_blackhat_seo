@@ -1,7 +1,12 @@
 <?php
 /*
-* Plugin Name: Purge blackHat SEO
-* Description: Clean blackHat SEO infection
+Plugin Name: Purge blackHat SEO
+Description: Clean blackHat SEO infection
+Plugin URI: https://github.com/EazyServer/purge_blackhat_seo
+Version: 1.0.0
+Author: EazyServer
+Author URI:
+License: GPL3
 */
 
 
