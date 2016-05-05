@@ -154,8 +154,8 @@ function _purge_blackhat_seo_callback() {
 	{
 		$signature = stripcslashes($_POST['signature']);
 		$dry_run = stripcslashes($_POST['dry_run']);
-		$posts_types_raw = json_decode(stripcslashes($_POST['posts_types']),true);
-		$posts_status_raw = json_decode(stripcslashes($_POST['posts_status']));
+		$posts_types_raw = json_decode(stripcslashes($_POST['posts_types']), true);
+		$posts_status_raw = json_decode(stripcslashes($_POST['posts_status']), true);
 		$pattern = '/<div '.$signature.'.*?<\/div>/is';
 
 		foreach($posts_status_raw as $k=>$flag)
