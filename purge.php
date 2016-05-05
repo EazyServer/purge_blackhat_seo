@@ -33,7 +33,7 @@ function purge_settings_page() {
 
 		<tr valign="top">
 			<th>Example Infection signature</th>
-			<td><img src="<?php echo plugin_dir_url( '/img/src2.png' , __FILE__ ); ?>"></td>
+			<td><img src="<?php echo  plugin_dir_url( __FILE__ ).'/img/src2.png'; ?>"></td>
 		</tr>
 
 		<tr valign="top">
@@ -50,7 +50,7 @@ function purge_settings_page() {
 			<th scope="row">Post Status</th>
 			<td>
 				<input type="checkbox" id="publish" checked />Publish &nbsp;
-				<input type="checkbox" id="pending" checked />Pending &nbsp;
+				<input type="checkbox" id="pending_" checked />Pending &nbsp;
 				<input type="checkbox" id="draft" checked />Draft &nbsp;
 				<input type="checkbox" id="autodraft" checked />Auto-draft &nbsp;
 				<input type="checkbox" id="future" checked />Future &nbsp;
@@ -95,7 +95,7 @@ function purge_settings_page() {
 
 				var posts_status = {
 					publish:jQuery('#publish').is(':checked')?1:0,
-					pending:jQuery('#pending').is(':checked')?1:0,
+					pending:jQuery('#pending_').is(':checked')?1:0,
 					draft:jQuery('#draft').is(':checked')?1:0,
 					'auto-draft':jQuery('#autodraft').is(':checked')?1:0,
 					future:jQuery('#future').is(':checked')?1:0,
@@ -108,7 +108,7 @@ function purge_settings_page() {
 					'action': 'purge_blackhat_seo',
 					'signature': signature,
 					'dry_run':dry_run,
-					'nonce':<? echo wp_create_nonce("Purge_blackHat_SEO_call"); ?>,
+					'nonce':'<?php echo wp_create_nonce("Purge_blackHat_SEO_call"); ?>',
 					'posts_types': JSON.stringify(posts_types),
 					'posts_status': JSON.stringify(posts_status)
 				};
