@@ -28,7 +28,7 @@ function purge_settings_page() {
 		<tr valign="top">
 			<th scope="row">Infection signature</th>
 			<td><input type="text" id="div_signature" style="width: 100%" placeholder="e.g: style='left: -461500px; position: absolute; top: -522100px'"/>
-			(The more the specific signature the more targeted purge results.)</td>
+			(The more specific signature the more targeted purge results.)</td>
 		</tr>
 
 		<tr valign="top">
